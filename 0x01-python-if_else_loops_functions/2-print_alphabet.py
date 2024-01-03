@@ -1,5 +1,6 @@
 #!/usr/bin/python3
-i = 97
-while i in range(123):
-    print(chr(i), end="")
-    i += 1
+output = ""
+
+for les in range(97, 123):
+    output = chr(les)
+    print("{}".format(output), end='')
