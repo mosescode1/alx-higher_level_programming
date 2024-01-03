@@ -3,3 +3,6 @@ file=$1
 chmod u+x $file
 ./$file
 
+git add .
+git commit -m $flie
+git push
