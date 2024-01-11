@@ -8,7 +8,7 @@ if __name__ == "__main__":
     arg = ""
 
     if liat_len == 0:
-        arg = "argument" + "."
+        arg = "arguments" + "."
     elif liat_len == 1:
         arg = "argument" + ":"
     else:
