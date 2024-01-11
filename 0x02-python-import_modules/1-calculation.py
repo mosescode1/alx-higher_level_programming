@@ -11,6 +11,6 @@ my_div = div(a, b)
 
 if __name__ == "__main__":
     print("{} + {} = {}".format(a, b, my_sum))
-    print("{} + {} = {}".format(a, b, my_sub))
-    print("{} + {} = {}".format(a, b, my_mul))
-    print("{} + {} = {}".format(a, b, my_div))
+    print("{} - {} = {}".format(a, b, my_sub))
+    print("{} * {} = {}".format(a, b, my_mul))
+    print("{} / {} = {}".format(a, b, my_div))
