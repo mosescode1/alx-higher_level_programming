@@ -4,4 +4,3 @@ def multiply_by_2(a_dictionary):
     for keys, value in sorted(a_dictionary.items()):
         new_dic[keys] = value * 2
     return new_dic
-
