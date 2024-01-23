@@ -1,12 +1,12 @@
 def safe_print_list(my_list=[], x=0):
-    listing = []
+    listing = my_list[:x]
     i = 0
     try:
-        for index, item in enumerate(my_list[:x]):
+        for _ in listing:
             i += 1
-            listing.append(item)
-    except IndexError:
+        print("".join(map(str,listing)))
+        return i
+    except Exception as e:
         pass
     
-    print("".join(map(str,listing)))
-    return i
+    
