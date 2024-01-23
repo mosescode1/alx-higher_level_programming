@@ -4,5 +4,7 @@ def safe_print_integer(value):
         if isinstance(value, int):
             print("{:d}".format(value))
             return True
-    except Exception as e:
-        return False
+        else:
+            return False
+    except ValueError:
+        raise ValueError
