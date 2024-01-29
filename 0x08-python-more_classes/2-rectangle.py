@@ -15,9 +15,12 @@ class Rectangle:
     
     def perimeter(self):
         """Return the perimeter of the rectangle"""
-        Per_width = self.__width * 2
-        Per_height = self.__height * 2
-        return Per_width + Per_height
+        if self.__height == 0 or self.__width == 0:
+            return 0
+        else:
+            per_height = self.__height * 2
+            per_width = self.__width * 2
+            return per_width + per_height
         
         
     @property
