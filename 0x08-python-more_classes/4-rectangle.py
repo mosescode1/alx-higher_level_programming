@@ -16,11 +16,17 @@ class Rectangle:
         """Return the perimeter of the rectangle"""
         if self.__height == 0 or self.__width == 0:
             return 0
-        else:
-            per_height = self.__height * 2
-            per_width = self.__width * 2
-            return per_width + per_height
+        return (self.__height + self.__width) * 2
 
+    def __str__(self):
+        """prints out # for the number of width in ref to height
+        and return the and empty string when width and height equal 0
+        """
+        if self.__height == 0 or self.__width == 0:
+            return ""
+        return '\n'.join('#' * self.__width for i in range(self.__height))
+    def __repr__(self) -> str:
+        return f"Rectangle({self.__width}, {self.__height})"
     @property
     def width(self):
         """Returns the rectangle width"""
@@ -35,8 +41,7 @@ class Rectangle:
 
         if value < 0:
             raise ValueError("width must be >= 0")
-        else:
-            self.__width = value
+        self.__width = value
 
     @property
     def height(self):
@@ -51,5 +56,4 @@ class Rectangle:
             raise TypeError("height must be an integer")
         if value < 0:
             raise ValueError("height must be >= 0")
-        else:
-            self.__height = value
+        self.__height = value
