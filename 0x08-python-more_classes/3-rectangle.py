@@ -21,6 +21,14 @@ class Rectangle:
             per_width = self.__width * 2
             return per_width + per_height
 
+    def __str__(self):
+        """prints out # for the number of width in ref to height
+        and return the and empty string when width and height equal 0
+        """
+        if self.__height == 0 or self.__width == 0:
+            return ""
+        else:
+            return '\n'.join('#' * self.__width for i in range(self.__height))
     @property
     def width(self):
         """Returns the rectangle width"""
