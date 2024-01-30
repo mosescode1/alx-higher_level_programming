@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+""" This module contains a class"""
 def LockedClass(object):
     """Dynamic attribute is locked"""
     
