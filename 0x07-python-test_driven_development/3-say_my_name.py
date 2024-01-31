@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""This Module containd a Matrix divider that dives every element in Matrix if list
+"""This Module That prints out the first name and last name
     Args:
         first_name(string): parameter first name
         last_name(string): parameter last_name
