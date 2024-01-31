@@ -1,4 +1,9 @@
 #!/usr/bin/python3
+"""This Module containd a Matrix divider that dives every element in Matrix if list
+    Args:
+            matrix(list): a list of elenent int or float
+            div(int, float): number to divide with
+    """
 def matrix_divided(matrix, div):
     """ A function that divides every element in a matrix
         Args:
@@ -22,7 +27,7 @@ def matrix_divided(matrix, div):
     # if div is 0 raise zeroDivisionError or Div is not an int or float
     if not isinstance(div, (int, float)):
         raise TypeError("div must be a number")
-    elif div == 0:
+    if div == 0:
         raise ZeroDivisionError('division by zero')
 
     return [[round((elem / div), 2) for elem in row] for row in matrix]
