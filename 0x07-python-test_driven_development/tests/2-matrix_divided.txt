@@ -49,3 +49,9 @@ Traceback (most recent call last):
     File "/root/alx-higher_level_programming/0x07-python-test_driven_development/2-matrix_divided.py", line 33, in <listcomp>
     return [[round((elem / div), 2) for elem in row] for row in matrix]
 TypeError: unsupported operand type(s) for /: 'str' and 'int'
+>>> mat = [
+...     [1, 2, 3],
+...     [4, 5, 6]
+... ]
+>>> matrix_divided(mat, (2))
+[[0.5, 1.0, 1.5], [2.0, 2.5, 3.0]]
