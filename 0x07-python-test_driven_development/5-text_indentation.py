@@ -1,10 +1,13 @@
 #!/usr/bin/python3
-"""This Module That prints out the first name and last name
+"""
+    This Module That Indents a string
     Args:
-        first_name(string): parameter first name
-        last_name(string): parameter last_name
-    """
+        text(str): string to be indented
+"""
 def text_indentation(text):
+    """
+        This Function indent a string when it comes in contact with . ? :
+    """
     if not isinstance(text, str):
         raise TypeError("text must be a string")
     for char in text:
