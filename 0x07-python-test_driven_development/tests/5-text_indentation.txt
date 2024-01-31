@@ -1,0 +1,18 @@
+>>> text = __import__('5-text_indentation').text_indentation
+>>> text(98)
+Traceback (most recent call last):
+  File "/root/alx-higher_level_programming/0x07-python-test_driven_development/5-text_indentation.py", line 14, in <module>
+    text_indentation(98)
+  File "/root/alx-higher_level_programming/0x07-python-test_driven_development/5-text_indentation.py", line 9, in text_indentation
+    raise TypeError("text must be a string")
+TypeError: text must be a string
+>>> word = "Hello. its veen ? great : year"
+>>> text(word)
+Hello.
+<BLANKLINE>
+ its veen ?
+<BLANKLINE>
+ great :
+<BLANKLINE>
+ year
+
