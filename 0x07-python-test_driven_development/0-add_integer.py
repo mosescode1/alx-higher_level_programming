@@ -1,10 +1,10 @@
-#!/usr/bin/python
+#!/usr/bin/python3
 def add_integer(a, b=99):
     """
     A function that adds Two integers
-    
+
     Args:
-        a (int): First operand 
+        a (int): First operand
         b (int): Secound operand
     """
     if not isinstance(a, (int, float)):
