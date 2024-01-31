@@ -15,4 +15,12 @@ Hello.
  great :
 <BLANKLINE>
  year
-
+>>> text(("string. yes"))
+string.
+<BLANKLINE>
+ yes
+>>> text(*("string", "yes"))
+Traceback (most recent call last):
+  File "/root/alx-higher_level_programming/0x07-python-test_driven_development/5-text_indentation.py", line 18, in <module>
+    text_indentation(*("string", "yes"))
+TypeError: text_indentation() takes 1 positional argument but 2 were given
