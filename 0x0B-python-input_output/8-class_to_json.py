@@ -4,8 +4,6 @@
     (list, dictionary, string, integer and boolean) for JSON serialization of an object:
 """
 
-import json
-
 def class_to_json(obj):
     """A funtion that serilize a class object to a json object"""
     dict_obj = obj.__dict__
