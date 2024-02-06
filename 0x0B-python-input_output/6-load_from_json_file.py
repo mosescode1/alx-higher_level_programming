@@ -6,6 +6,7 @@
 
 import json
 
+
 def load_from_json_file(filename):
     """Funtion that deserilize the content of a file"""
     with open(filename, 'r', encoding="UTF8") as f:
