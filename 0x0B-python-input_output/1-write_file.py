@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""A module that that reads a text file (UTF8) and prints it to stdout:"""
+"""A module that that write a text file (UTF8) and return nuber of character written:"""
 
 
 def write_file(filename="", text=""):
