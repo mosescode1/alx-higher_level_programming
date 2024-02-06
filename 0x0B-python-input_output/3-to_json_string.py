@@ -1,7 +1,8 @@
 #!/usr/bin/python3
-"""A module that that appends to a text file (UTF8) and 
-    returns number of characters added
+"""A module that hat returns the JSON representation of 
+    an object (string):
 """
+
 import json
 
 
