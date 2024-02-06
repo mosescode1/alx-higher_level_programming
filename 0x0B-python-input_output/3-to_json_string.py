@@ -1,9 +1,8 @@
 #!/usr/bin/python3
-import json
 """A module that that appends to a text file (UTF8) and 
     returns number of characters added
 """
-
+import json
 
 def to_json_string(my_obj):
     """Function that converst a python representation of 
