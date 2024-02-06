@@ -1,9 +1,14 @@
+#!/usr/bin/python3
+
 """
     A Module that returns an object 
     (Python data structure) 
     represented by a JSON string:
 """
+
+
 import json
+
 
 def from_json_string(my_str):
     """
