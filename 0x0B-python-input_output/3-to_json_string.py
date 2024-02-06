@@ -2,7 +2,6 @@
 """A module that hat returns the JSON representation of 
     an object (string):
 """
-
 import json
 
 
