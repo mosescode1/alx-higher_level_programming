@@ -145,24 +145,27 @@ class Rectangle(Base):
             )
 
     # updating the rectangles
-    def update(self, *args):
-        if len(args) == 1:
-            self.id = args[0]
-        elif len(args) == 2:
-            self.id = args[0]
-            self.__width = args[1]
-        elif len(args) == 3:
-            self.id = args[0]
-            self.__width = args[1]
-            self.__height = args[2]
-        elif len(args) == 4:
-            self.id = args[0]
-            self.__width = args[1]
-            self.__height = args[2]
-            self.__x = args[3]
-        elif len(args) == 5:
-            self.id = args[0]
-            self.__width = args[1]
-            self.__height = args[2]
-            self.__x = args[3]
-            self.__y = args[4]
+    def update(self, *args, **kwargs):
+
+        if args:
+            if len(args) == 1:
+                self.id = args[0]
+            elif len(args) == 2:
+                self.id, self.__width = args
+            elif len(args) == 3:
+                self.id, self.__width, self.__height = args
+            elif len(args) == 4:
+                self.id, self.__width, self.__height, self.__x = args
+            elif len(args) == 5:
+                self.id, self.__width, self.__height, self.__x, self.__y = args
+        else:
+            if 'id' in kwargs:
+                self.id = kwargs['id']
+            if 'height' in kwargs:
+                self.__height = kwargs['height']
+            if 'width' in kwargs:
+                self.__width = kwargs['width']
+            if 'x' in kwargs:
+                self.__x = kwargs['x']
+            if 'y' in kwargs:
+                self.__y = kwargs['y']
