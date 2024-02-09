@@ -1,3 +1,4 @@
+#!/usr/bin/python3
 """A class that inherits from the base class"""
 Base = __import__("base").Base
 
@@ -134,12 +135,34 @@ class Rectangle(Base):
 
     def display(self):
         for _ in range(self.__height):
-            for _ in range(self.__width):
-                print("#", end="")
-            print()
+            print(" " * self.__x + "#" * self.__width)
 
+    # returns the string representation
     def __str__(self):
         return "[{}] ({}) {}/{} - {}/{}". format(
             "Rectangle", self.id, self.__x, self.__y,
             self.__width, self.__height
             )
+
+    # updating the rectangles
+    def update(self, *args):
+        if len(args) == 1:
+            self.id = args[0]
+        elif len(args) == 2:
+            self.id = args[0]
+            self.__width = args[1]
+        elif len(args) == 3:
+            self.id = args[0]
+            self.__width = args[1]
+            self.__height = args[2]
+        elif len(args) == 4:
+            self.id = args[0]
+            self.__width = args[1]
+            self.__height = args[2]
+            self.__x = args[3]
+        elif len(args) == 5:
+            self.id = args[0]
+            self.__width = args[1]
+            self.__height = args[2]
+            self.__x = args[3]
+            self.__y = args[4]
