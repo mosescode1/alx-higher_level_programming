@@ -134,8 +134,12 @@ class Rectangle(Base):
         return self.__width * self.__height
 
     def display(self):
-        for _ in range(self.__height):
-            print(" " * self.__x + "#" * self.__width)
+        out = ('\n' * self.__y)
+
+        for i in range(self.__height):
+            out += ' ' * self.__x + '#' * self.__width + '\n'
+
+        print(out, end='')
 
     # returns the string representation
     def __str__(self):
