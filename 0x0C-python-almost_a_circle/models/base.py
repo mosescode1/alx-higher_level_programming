@@ -22,12 +22,14 @@ class Base:
 
     @staticmethod
     def to_json_string(list_dictionaries):
+        """convert json to string"""
         if list_dictionaries is None or len(list_dictionaries) == 0:
             return "[]"
         return json.dumps(list_dictionaries)
 
     @classmethod
     def save_to_file(cls, list_objs):
+        """Saving to a file"""
         filename = cls.__name__ + ".json"
         json_list = [obj.to_dictionary() for obj in list_objs]
 
@@ -36,12 +38,14 @@ class Base:
 
     @staticmethod
     def from_json_string(json_string):
+        """Deserilization of json """
         if json_string is None or len(json_string) == 0:
             return "[]"
         return json.loads(json_string)
 
     @classmethod
     def create(cls, **dictionary):
+        """Creates a new dict"""
         if cls.__name__ == "Rectangle":
             instances = cls(10, 30)
         elif cls.__name__ == "Square":
@@ -52,6 +56,7 @@ class Base:
 
     @classmethod
     def load_from_file(cls):
+        """loads from a file"""
         filename = cls.__name__ + '.json'
 
         if not filename:
@@ -64,6 +69,7 @@ class Base:
 
     @classmethod
     def save_to_file_csv(cls, list_objs):
+        """Save a json to a csv file"""
         filename = cls.__name__ + '.csv'
         json_list = [obj.to_dictionary() for obj in list_objs]
         with open(filename, 'w') as f:
@@ -71,6 +77,7 @@ class Base:
 
     @classmethod
     def load_from_file_csv(cls):
+        """load a csv file"""
         filename = cls.__name__ + ".csv"
         if not filename:
             return "[]"
