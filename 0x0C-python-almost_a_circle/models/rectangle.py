@@ -220,9 +220,9 @@ class Rectangle(Base):
     def to_dictionary(self):
         """Creates a dictionary"""
         diction = dict()
-        diction['id'] = self.id
-        diction['width'] = self.__width
-        diction['height'] = self.__height
         diction['x'] = self.__x
         diction['y'] = self.__y
+        diction['id'] = self.id
+        diction['height'] = self.__height
+        diction['width'] = self.__width
         return diction
