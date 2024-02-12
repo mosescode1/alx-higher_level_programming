@@ -34,7 +34,7 @@ class Square(Rectangle):
             width_value (int): interger value of size
 
         Raises:
-            TypeError:  if an int isnt entred 
+            TypeError:  if an int isnt entred
             ValueError:if size value is lesser than 0
         """
         if not isinstance(width_value, int):
