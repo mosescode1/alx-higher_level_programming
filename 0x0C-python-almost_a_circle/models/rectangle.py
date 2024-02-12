@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """A class that inherits from the base class"""
-Base = __import__("base").Base
+from models.base import Base
 
 
 class Rectangle(Base):
@@ -146,7 +146,7 @@ class Rectangle(Base):
         return "[{}] ({}) {}/{} - {}/{}". format(
             "Rectangle", self.id, self.__x, self.__y,
             self.__width, self.__height
-            )
+        )
 
     # updating the rectangles
     def update(self, *args, **kwargs):
@@ -176,9 +176,9 @@ class Rectangle(Base):
 
     def to_dictionary(self):
         diction = dict()
+        diction['id'] = self.id
+        diction['width'] = self.__width
+        diction['height'] = self.__height
         diction['x'] = self.__x
         diction['y'] = self.__y
-        diction['id'] = self.id
-        diction['height'] = self.__height
-        diction['width'] = self.__width
         return diction

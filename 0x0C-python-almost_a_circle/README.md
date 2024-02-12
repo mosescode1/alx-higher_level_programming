@@ -1,6 +1,6 @@
 # 0x0C. Python - Almost a circle
 
-### Background Context
+## Background Context
 
 <p><strong>The AirBnB </strong>project is a big part of the Higher level curriculum. This project will help you be ready for it.</p>
 
@@ -17,7 +17,7 @@
 - Unittest
 - Read/Write file
 
-### You will also learn about:
+### You will also learn about
 
 - args and kwargs
 - Serialization/Deserialization
@@ -32,6 +32,6 @@ At the end of this project, you are expected to be able to explain to anyone, wi
 - What is Unit testing and how to implement it in a large project
 - How to serialize and deserialize a Class
 - How to write and read a JSON file
-- What is *args and how to use it
-- What is **kwargs and how to use it
+- What is \*args and how to use it
+- What is \*\*kwargs and how to use it
 - How to handle named arguments in a function

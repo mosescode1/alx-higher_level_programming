@@ -15,7 +15,7 @@ class Square(Rectangle):
             self.x,
             self.y,
             self.size
-            )
+        )
 
     @property
     def size(self):
@@ -53,7 +53,7 @@ class Square(Rectangle):
     def to_dictionary(self):
         diction = dict()
         diction['id'] = self.id
-        diction['x'] = self.x
         diction['size'] = self.size
+        diction['x'] = self.x
         diction['y'] = self.y
         return diction

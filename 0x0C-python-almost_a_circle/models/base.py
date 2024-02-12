@@ -59,3 +59,10 @@ class Base:
             json_data = file.read()
             obj_dicts = cls.from_json_string(json_data)
             return [cls.create(**obj) for obj in obj_dicts]
+
+
+# b1 = Base()
+# dicts = {'name': 'moses', 'age': 30}
+
+# value = b1.to_json_string(dicts)
+# print(type(value))
