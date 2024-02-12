@@ -4,8 +4,25 @@ from models.base import Base
 
 
 class Rectangle(Base):
+    """A rectangle class
+
+    Args:
+        Base (ParentClass): instantize an id
+    """
 
     def __init__(self, width, height, x=0, y=0, id=None):
+        """an attribute instance
+            Args:
+            width (int): size width
+            height (int): size height_
+            x (int): x_axis value . Defaults to 0.
+            y (int): y_axis value . Defaults to 0.
+            id (int): parent id. Defaults to None.
+
+        Raises:
+            TypeError: when either of the attribues are not of type int
+            ValueError: if value is lesser than 0
+        """
 
         if not isinstance(width, int):
             raise TypeError("width must be an integer")
@@ -123,6 +140,15 @@ class Rectangle(Base):
 
     @y.setter
     def y(self, y_value):
+        """_summary_
+
+        Args:
+            y_value (int): value to set y
+
+        Raises:
+            TypeError: y  must be an integer"
+            ValueError: y must be >= 0
+        """
         if not isinstance(y_value, int):
             raise TypeError("y must be an integer")
         elif y_value < 0:
@@ -131,9 +157,16 @@ class Rectangle(Base):
             self.__y = y_value
 
     def area(self):
+        """_summary_
+
+        Returns:
+            int: return the area of a rectangle
+        """
         return self.__width * self.__height
 
     def display(self):
+        """prints # in range of height
+        """
         out = ('\n' * self.__y)
 
         for i in range(self.__height):
@@ -142,7 +175,14 @@ class Rectangle(Base):
         print(out, end='')
 
     # returns the string representation
+
     def __str__(self):
+        """Rectangle Representation
+
+        Returns:
+            str : returns the string reperesentation
+            of the rectangle class
+        """
         return "[{}] ({}) {}/{} - {}/{}". format(
             "Rectangle", self.id, self.__x, self.__y,
             self.__width, self.__height
@@ -150,6 +190,9 @@ class Rectangle(Base):
 
     # updating the rectangles
     def update(self, *args, **kwargs):
+        """ Update Each attributes with new values
+            with *args pr **kwargs
+        """
 
         if args:
             if len(args) == 1:
