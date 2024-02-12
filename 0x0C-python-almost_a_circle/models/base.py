@@ -1,11 +1,11 @@
 #!/usr/bin/python3
-import json
-from turtle import Turtle, Screen
 """_summary_
 
     Returns:
         _type_: _description_
-"""
+    """
+import json
+from turtle import Turtle, Screen
 
 
 class Base:
