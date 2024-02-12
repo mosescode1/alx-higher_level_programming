@@ -175,6 +175,7 @@ class Rectangle(Base):
                 self.__y = kwargs['y']
 
     def to_dictionary(self):
+        """Creates a dictionary"""
         diction = dict()
         diction['id'] = self.id
         diction['width'] = self.__width

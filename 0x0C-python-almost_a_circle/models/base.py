@@ -1,5 +1,7 @@
 #!/usr/bin/python3
 import json
+from turtle import Turtle, Screen
+
 """
     This is a modile a python package
 """
@@ -60,9 +62,47 @@ class Base:
             obj_dicts = cls.from_json_string(json_data)
             return [cls.create(**obj) for obj in obj_dicts]
 
+    @classmethod
+    def save_to_file_csv(cls, list_objs):
+        filename = cls.__name__ + '.csv'
+        with open(filename, 'w') as f:
+            f.write(list_objs)
 
-# b1 = Base()
-# dicts = {'name': 'moses', 'age': 30}
+    @staticmethod
+    def draw(list_rectangles, list_squares):
+        """draws all rectangles and squares"""
+        turtle = Turtle()  # creating an instance of the Turtle class
 
-# value = b1.to_json_string(dicts)
-# print(type(value))
+        my_screen = Screen()  # instance of d screen class to pull up a window
+
+        turtle.screen.bgcolor("coral")
+        turtle.pensize(3)
+        turtle.shape("turtle")
+        turtle.color("#ffffff")
+
+        for rect in list_rectangles:
+            turtle.showturtle()
+            turtle.up()
+            turtle.goto(rect.x, rect.y)
+            turtle.down()
+            for i in range(2):
+                turtle.forward(rect.width)
+                turtle.left(90)
+                turtle.forward(rect.height)
+                turtle.left(90)
+                turtle.hideturtle()
+
+        turtle.color("#b5e3d8")
+        for sq in list_squares:
+            turtle.showturtle()
+            turtle.up()
+            turtle.goto(sq.x, sq.y)
+            turtle.down()
+            for i in range(2):
+                turtle.forward(sq.width)
+                turtle.left(90)
+                turtle.forward(sq.height)
+                turtle.left(90)
+            turtle.hideturtle()
+
+        my_screen.exitonclick()
