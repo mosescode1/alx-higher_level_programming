@@ -65,8 +65,19 @@ class Base:
     @classmethod
     def save_to_file_csv(cls, list_objs):
         filename = cls.__name__ + '.csv'
+        json_list = [obj.to_dictionary() for obj in list_objs]
         with open(filename, 'w') as f:
-            f.write(list_objs)
+            f.write(cls.to_json_string(json_list))
+
+    @classmethod
+    def load_from_file_csv(cls):
+        filename = cls.__name__ + ".csv"
+        if not filename:
+            return "[]"
+        with open(filename, 'r') as f:
+            json_data = f.read()
+            obj_dicts = cls.from_json_string(json_data)
+            return [cls.create(**obj) for obj in obj_dicts]
 
     @staticmethod
     def draw(list_rectangles, list_squares):
