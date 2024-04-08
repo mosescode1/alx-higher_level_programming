@@ -3,9 +3,9 @@ const cmdLineArgv = process.argv;
 
 function arrayLength(array) {
   let count = 0;
-  array.forEach((element) => {
+  for (let elem in array) {
     count++;
-  });
+  }
   return count;
 }
 let arrayCount = arrayLength(cmdLineArgv);
