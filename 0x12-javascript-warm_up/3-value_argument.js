@@ -4,5 +4,5 @@ const cmdLineArgv = process.argv[2];
 if (cmdLineArgv === undefined) {
   console.log('No argument');
 } else {
-  console.log(cmdLineArgv[2]);
+  console.log(cmdLineArgv);
 }
