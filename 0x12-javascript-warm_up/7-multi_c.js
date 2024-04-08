@@ -2,7 +2,7 @@
 const cmdLineArgv = process.argv[2];
 const converted = Number(cmdLineArgv);
 
-if (!Number(converted)) {
+if (isNaN(converted)) {
   console.log('Missing number of occurrences');
 } else {
   let i;
