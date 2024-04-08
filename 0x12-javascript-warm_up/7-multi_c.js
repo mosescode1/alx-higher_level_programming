@@ -1,7 +1,8 @@
 #!/usr/bin/node
 const cmdLineArgv = process.argv[2];
 const converted = Number(cmdLineArgv);
-if (isNaN(converted)) {
+
+if (!Number(converted)) {
   console.log('Missing number of occurrences');
 } else {
   let i;
