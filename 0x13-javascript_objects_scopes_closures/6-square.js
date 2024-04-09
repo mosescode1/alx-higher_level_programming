@@ -2,7 +2,7 @@
 const square = require('./5-square.js');
 
 class Square extends square {
-  charPrint(value) {
+  charPrint (value) {
     if (arguments.length === 0) {
       value = 'x';
     }
