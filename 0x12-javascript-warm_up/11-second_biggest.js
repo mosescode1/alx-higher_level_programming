@@ -5,7 +5,7 @@ const newArray = [];
 if (num.length === 3 || num[2] === undefined) {
   console.log(0);
 } else {
-  function iterateArray(num) {
+  function iterateArray (num) {
     // check the length of the array
 
     let i;
@@ -16,12 +16,12 @@ if (num.length === 3 || num[2] === undefined) {
   }
 
   // sorts the array of numbers
-  function sortArray(num) {
+  function sortArray (num) {
     const sorted = num.slice().sort((a, b) => a - b);
     return sorted;
   }
   // returns the second bigest number in the list
-  function secondBigest(sortedArray) {
+  function secondBigest (sortedArray) {
     let i, least;
     for (i = 0; i < sortedArray.length - 1; i++) {
       least = i;
@@ -29,6 +29,6 @@ if (num.length === 3 || num[2] === undefined) {
     console.log(sortedArray[least]);
   }
   iterateArray(num);
-  const sort = sortArray(newArray);
+  const sort = sortArray (newArray);
   secondBigest(sort);
 }
