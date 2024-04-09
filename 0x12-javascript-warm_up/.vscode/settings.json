@@ -1,7 +1,0 @@
-{
-  "files.autoSave": "onFocusChange",
-  "editor.wordWrap": "on",
-  "editor.autoClosingQuotes": "always",
-  "prettier.jsxSingleQuote": true,
-  "prettier.singleQuote": true
-}
