@@ -29,6 +29,6 @@ if (num.length === 3 || num[2] === undefined) {
     console.log(sortedArray[least]);
   }
   iterateArray(num);
-  const sort = sortArray (newArray);
+  const sort = sortArray(newArray);
   secondBigest(sort);
 }
