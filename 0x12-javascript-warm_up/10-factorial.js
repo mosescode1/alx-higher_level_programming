@@ -1,5 +1,5 @@
 #!/usr/bin/node
-let num = Number(process.argv[2]);
+const num = Number(process.argv[2]);
 
 function fact (n) {
   if (isNaN(n)) {
