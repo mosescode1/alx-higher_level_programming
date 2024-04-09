@@ -2,7 +2,7 @@
 const cmdLineArgv = process.argv[2];
 const converted = Number(cmdLineArgv);
 
-if (cmdLineArgv === undefined) {
+if (cmdLineArgv === undefined || isNaN(converted)) {
   console.log('Missing size');
 } else {
   let i, j;
