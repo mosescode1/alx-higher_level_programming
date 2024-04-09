@@ -1,6 +1,6 @@
 #!/usr/bin/node
 class Rectangle {
-  constructor (w, h) {
+  constructor(w, h) {
     if (arguments.length <= 1) {
       return;
     }
@@ -11,14 +11,9 @@ class Rectangle {
     this.height = h;
   }
 
-  print () {
-    let result = '';
+  print() {
     for (let i = 0; i < this.height; i++) {
-      for (let j = 0; j < this.width; j++) {
-        result += 'x';
-      }
-      console.log(result);
-      result = '';
+      console.log('x'.repeat(this.width));
     }
   }
 }
