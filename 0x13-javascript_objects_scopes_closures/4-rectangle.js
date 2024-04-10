@@ -1,8 +1,14 @@
 #!/usr/bin/node
 class Rectangle {
   constructor (w, h) {
-    this.width = w;
+    if (arguments.length <= 1) {
+      return;
+    }
+    if (w <= 0 || h <= 0) {
+      return;
+    }
     this.height = h;
+    this.width = w;
   }
 
   print () {
