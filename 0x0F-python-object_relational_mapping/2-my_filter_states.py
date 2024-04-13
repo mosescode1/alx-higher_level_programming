@@ -13,7 +13,7 @@ if __name__ == "__main__":
                          password=password, port=3306, database=database)
 
     cur = db.cursor()
-    query = 'SELECT * FROM states WHERE name = "{}" ORDER BY id'.format(
+    query = 'SELECT * FROM states WHERE BINARY name = "{}" ORDER BY id'.format(
         user_arg)
     cur.execute(query)
     result = cur.fetchall()
