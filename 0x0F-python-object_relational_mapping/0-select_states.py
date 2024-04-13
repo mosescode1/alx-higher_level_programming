@@ -7,7 +7,6 @@ if __name__ == "__main__":
     user = args[1]
     password = args[2]
     database = args[3]
-    print(type(database))
 
     db = MySQLdb.connect(host='localhost', user=user,
                          password=password, port=3306, database=database)
