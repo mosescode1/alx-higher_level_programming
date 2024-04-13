@@ -13,10 +13,9 @@ if __name__ == "__main__":
                          password=password, port=3306, database=database)
 
     cur = db.cursor()
-    query = """SELECT * FROM states
-            WHERE BINARY name = %s
-            ORDER BY id"""
-    cur.execute(query, (user_arg,))
+    query = 'SELECT * FROM states WHERE name = "{}" ORDER BY id'.format(
+        user_arg)
+    cur.execute(query)
     result = cur.fetchall()
     for res in result:
         print(res)
