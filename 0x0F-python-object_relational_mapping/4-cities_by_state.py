@@ -13,8 +13,8 @@ if __name__ == "__main__":
                          password=password, port=3306, database=database)
 
     cur = db.cursor()
-    query = """SELECT cities.id, cities.name, states.name  FROM cities 
-        INNER JOIN states 
+    query = """SELECT cities.id, cities.name, states.name  FROM cities
+        INNER JOIN states
         WHERE cities.state_id = states.id
         ORDER BY cities.id ASC"""
     cur.execute(query)
