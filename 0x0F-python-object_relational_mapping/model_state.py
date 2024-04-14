@@ -1,21 +1,19 @@
 #!/usr/bin/python3
-"""Base module for my sql model"""
-from sqlalchemy import create_engine, Column, Integer, String
+""" python file that contains the class
+definition of a State and an instance Base
+"""
+from sqlalchemy import Column, Integer, String
 from sqlalchemy.ext.declarative import declarative_base
-import sys
 
 Base = declarative_base()
-engine = create_engine('mysql+mysqldb://{}:{}@localhost/{}'.format(
-    sys.argv[1], sys.argv[2], sys.argv[3]), pool_pre_ping=True)
-
-Base.metadata.create_all(engine)
 
 
 class State(Base):
-    """State class"""
+    """_summary_
+
+    Args:
+        Base (_type_): _description_
+    """
     __tablename__ = "states"
     id = Column('id', Integer, autoincrement=True, primary_key=True)
     name = Column('name', String(128))
-
-    def __init__(self, name):
-        self.name = name
