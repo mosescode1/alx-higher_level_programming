@@ -24,7 +24,7 @@ if __name__ == "__main__":
     for res in result:
         val += f'{res[0]}, '
     val = val.rstrip(', ')
-    #val = val[:-2]
+    # val = val[:-2]
     print(val)
     cur.close()
     db.close()
