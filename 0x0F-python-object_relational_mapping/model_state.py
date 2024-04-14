@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""Base module"""
+"""Base module for my sql model"""
 from sqlalchemy import create_engine, Column, Integer, String
 from sqlalchemy.ext.declarative import declarative_base
 import sys
