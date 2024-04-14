@@ -4,9 +4,6 @@ import MySQLdb
 import sys
 if __name__ == "__main__":
 
-    if len(sys.argv) != 5:
-        sys.exit(1)
-
     args = sys.argv
     user = args[1]
     password = args[2]
@@ -17,15 +14,17 @@ if __name__ == "__main__":
                          password=password, port=3306, database=database)
 
     cur = db.cursor()
-    try:
-        query = """SELECT * FROM cities
-            WHERE name LIKE %s"""
-        cur.execute(query, (user_arg,))
-        result = cur.fetchall()
-        for res in result:
-            print(res)
-    except MySQLdb.Error:
-        pass
-
+    query = """SELECT cities.name FROM cities
+    INNER JOIN states ON cities.state_id = states.id
+    WHERE states.name LIKE %s
+    ORDER BY states.id"""
+    cur.execute(query, (user_arg,))
+    result = cur.fetchall()
+    val = ''
+    for res in result:
+        val += f'{res[0]}, '
+    val = val.rstrip(', ')
+    #val = val[:-2]
+    print(val)
     cur.close()
     db.close()
