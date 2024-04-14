@@ -19,10 +19,4 @@ if __name__ == "__main__":
 
     # get all obj from the database order by the id in assecding order
     result = session.query(State).order_by(State.id.asc())
-    for res in result.all():
-        if state.id == res.id:
-            print(state.id)
-            break
-
-    for res in result.all():
-        print('{}: {}'.format(res.id, res.name))
+    print(state.id)
