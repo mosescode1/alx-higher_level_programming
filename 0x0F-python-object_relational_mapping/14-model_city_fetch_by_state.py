@@ -1,5 +1,6 @@
 #!/usr/bin/python3
 """Start link class to table in database
+    this is a good module
 """
 import sys
 from model_state import Base, State

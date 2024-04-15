@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+"""base module for city"""
 from sqlalchemy.orm import declarative_base, relationship
 from sqlalchemy import Column, Integer, String, ForeignKey
 from model_state import Base
