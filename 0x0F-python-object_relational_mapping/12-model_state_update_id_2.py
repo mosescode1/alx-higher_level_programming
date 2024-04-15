@@ -13,7 +13,7 @@ if __name__ == "__main__":
     Base.metadata.create_all(bind=engine)
     session = Session(bind=engine)
     # get all obj from the database order by the id in assecding order
-    result = session.query(State).filter_by(id=2).all()
-    result[0].name = 'New Mexico'
+    result = session.query(State).get(2)
+    result.name = 'New Mexico'
     session.commit()
     session.close()
