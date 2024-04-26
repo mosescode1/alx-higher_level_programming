@@ -15,13 +15,13 @@ if __name__ == "__main__":
 
     param = {'q': alpha}
 
-    with requests.post(url, data=param) as response:
-        try:
-            value = response.json()
+    try:
+        response = requests.post(url, data=param)
+        value = response.json()
 
-            if value:
-                print(f"[{value.get("id")}] {value.get('name')}")
-            else:
-                print("No result")
-        except ValueError:
-            print("Not a valid JSON")
+        if value:
+            print(f"[{value.get("id")}] {value.get('name')}")
+        else:
+            print("No result")
+    except ValueError:
+        print("Not a valid JSON")
