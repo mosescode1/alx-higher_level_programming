@@ -10,7 +10,7 @@ if __name__ == "__main__":
 
     alpha = ""
     url = "http://0.0.0.0:5000/search_user"
-    if len(sys.argv):
+    if len(sys.argv) > 1:
         alpha = sys.argv[1]
 
     param = {'q': alpha}
