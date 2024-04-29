@@ -1,0 +1,76 @@
+00:25:54	Charity Nyamamba:	port 80: Connection refused
+00:31:38	Collins Kim:	ssh-keygen
+00:31:48	Clency:	ssh -keygen
+00:38:29	Nikki:	hi what is the command to get a simplified version of the man pages?
+00:38:47	Collins Kim:	Replying to "hi what is the comma..."
+
+tldr
+00:39:15	Nikki:	Replying to "hi what is the com..."
+
+thank you
+00:46:38	Daniel Zongo(Abuja, Nigeria):	On my intranet, I am not seeing a server. Its empty. What do I do?
+00:47:05	somin:	have the same quiz
+00:48:59	MongeziS:	No Severs show on my intranet
+00:49:48	somin:	how can I activate it ?
+00:55:47	Abdelrhman Hany:	do we need to add it to the session? probably using ssh-add?
+00:55:48	Collins Kim:	different key location
+00:55:55	Charity Nyamamba:	we used the new ip right?
+00:56:00	Eric:	the server is still running in the backgound
+00:56:20	somin:	request another server?
+00:56:31	1 Eseoghene ODODO:	I believe the private key school should be in the ~/.ssh/folder
+00:56:48	Firaol:	we just change the path to ssh private key
+00:58:31	Abdelrhman Hany:	you need the key to have permissions of 600 so probably run chmod to change the permissions to 600
+01:02:03	Firaol:	owner can read and write but others can't do anything
+01:02:04	Abdelrhman Hany:	this means read and write permissions for the owner user
+01:02:12	Abdelrhman Hany:	and no permissions for the group and all
+01:02:13	1 Eseoghene ODODO:	rw- ower
+01:02:25	Bravin Onwonga:	owner r, w. other users and groups can't read, write or execute
+01:02:48	1 Eseoghene ODODO:	0 - group0 - others
+01:03:11	Abdelrhman Hany:	owner can read only
+01:03:31	Abdelrhman Hany:	its rwx (4,2,1)
+01:03:53	Abdelrhman Hany:	6 means r + w (4 + 2)
+01:06:00	Abdelrhman Hany:	ufw
+01:08:31	Bravin Onwonga:	A section of your screen is not visible?
+01:08:36	Ahmed Hesham:	it's not clear
+01:08:44	Mahmoud Ragab Fouad Abo3mira:	YES
+01:10:21	somin:	yes
+01:10:30	Ahmed Hesham:	there is a section that is not clear from the terminal
+01:11:08	Ahmed Hesham:	fine it's fixed now
+01:12:24	Bravin Onwonga:	How soon will the recording be ready?
+01:14:24	Abdelrhman Hany:	no Ihaven't experienced it
+01:14:34	Ahmed Hesham:	no
+01:14:54	Abdelrhman Hany:	wait is it caused by a firewall on the server blocking port 22?
+01:15:18	Abdelrhman Hany:	there's no turn around but to request a new server?
+01:17:31	Charity Nyamamba:	sudo ufw allow 'Nginx HTTP' found this command from digital ocean and thought it enables port80
+01:18:00	Charity Nyamamba:	but still has the port80 connection refused error
+01:18:45	Ahmed Hesham:	you're using wrong ip
+01:18:49	Firaol:	that is not current ip
+01:18:55	Abdelrhman Hany:	the ip is wrong
+01:19:58	Abdelrhman Hany:	it's inconsistent xD
+01:20:08	Abdelrhman Hany:	it's weird that it gave error before finally connecting
+01:20:46	Charity Nyamamba:	sudo ufw allow 'Nginx HTTP' found this command from digital ocean and thought it enables port80,but still has the port80 connection refused error
+01:22:08	Abdelrhman Hany:	I have a question that, since the sandbox is a server with its ip, why can't I install NGINX on the sandbox and configure it as a web server?
+01:22:25	Abdelrhman Hany:	that idea was so confusing to me and I need more explanation on that topic, thank you ^^
+01:22:53	Abdelrhman Hany:	like what's the difference between the sandboxes and the servers were working with now?
+01:24:18	Mohamed Rabiaa:	Hi, I can't access my student pack
+01:29:33	Abdelrhman Hany:	I have a question that, since the sandbox is a server with its ip, why can't I install NGINX on the sandbox and configure it as a web server?that idea was so confusing to me and I need more explanation on that topic, thank you ^^
+01:34:07	Abdelrhman Hany:	Oh wow that's new
+01:34:43	Abdelrhman Hany:	no you need to run the apt update
+01:37:18	1 Eseoghene ODODO:	Pls how did you install nginx?
+01:37:46	Ahmed Hesham:	yes please repeat it again
+01:58:56	Abdelrhman Hany:	yes we do
+01:59:05	Abdelrhman Hany:	I configured it properly :D
+02:03:23	Abdelrhman Hany:	no all good :D
+02:11:50	Wally:	Sorry to interrupt, but i keep getting 
+
+nginx
+nginx: [emerg] bind() to 0.0.0.0:80 failed (98: Address already in use)
+nginx: [emerg] bind() to [::]:80 failed (98: Address already in use)
+nginx: [emerg] bind() to 0.0.0.0:80 failed (98: Address already in use)
+nginx: [emerg] bind() to [::]:80 failed (98: Address already in use)
+02:27:33	Abdelrhman Hany:	https://www.digitalocean.com/community/tutorials/how-to-configure-nginx-to-use-custom-error-pages-on-ubuntu-14-04
+02:46:51	Ebube:	I installed and tried to use the `tldr` command and it just tells me "no entry" for most commands I try... I don't know if I did something wrong
+02:47:46	Ebube:	yes, I tried for ls, pwd, cd awk & sed... It didn't work
+02:48:08	Charity Nyamamba:	sudo ufw allow 'Nginx HTTP' found this command from digital ocean and thought it enables port80,but still has the port80 connection refused error
+02:50:45	Ebube:	okay... It didn't do this when I tried... I'll uninstall the package and reinstall it
+02:50:51	Ebube:	Thank you
