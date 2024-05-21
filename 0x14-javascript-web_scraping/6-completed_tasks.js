@@ -8,7 +8,6 @@ res.get(url, function (err, response, body) {
     console.error(err);
     return;
   }
-  const arra = [];
   const tasks = JSON.parse(body);
 
   const obj = {};
